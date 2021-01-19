@@ -1,0 +1,3 @@
+nodemon - run the code
+Ctrl C to get out of the server
+rs tp restart the server
