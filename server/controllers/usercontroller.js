@@ -31,8 +31,8 @@ router.post('/create', function(req, res){
 
 //User Signin
 router.post('/login', function(req, res) {
-    console.log(req.body.user.email);
-    console.log(req.body.user.password);
+    //console.log(req.body.user.email);
+    //console.log(req.body.user.password);
     User.findOne({
         where: {
             email: req.body.user.email

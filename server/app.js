@@ -10,6 +10,13 @@ let calc = require('./controllers/calculatorcontroller');
 //sequelize.sync({force:true});
 sequelize.sync();
 
+app.use(require('./middleware/headers'));
+// app.options('*', (req,res) => {
+//     res.json({
+//         status: 'OK'
+//     })
+// })
+
 app.use(express.json());
 app.use('/journal',  journal);
 app.use('/user', user);

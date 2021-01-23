@@ -1,3 +1,51 @@
 nodemon - run the code
 Ctrl C to get out of the server
 rs tp restart the server
+
+Github Instructions:
+git add .
+git commit -m "my comment for this commit"
+git push
+
+
+
+Git Notes:
+version control system user to track any file.  Most notably used to development.
+Git comment are checksumed using SHA-1 meaning no currupt without git knowing about it.
+Three States of Git
+- modified: file has been changed but it has not been committed
+- staging: files that are marked to go into the next commit snapshot (utilizing "git add ." or "git add filename.xxx")
+- commit: data safely stored in the local database (such as vm box, docker, computer, etc.)
+
+to start version track/control
+git Instructions
+create new project
+your project should never be inside another project folder in order to avaoid inverse tree tracking issues
+
+stage our files for commit
+git add <file>
+
+user git satus to check file staging
+to commit your files, use git commit -m "your message", command
+
+to create new branch -- git branch <new_branch_name?
+OR
+to create and checkout into it -- git checkout -b <new_branch_name>
+
+to switch between branches, use git checkout <branch_name>
+
+to delete a branch, use git branch -D <branch_name>
+
+to unstage a commit, use git reset
+
+to remove an unstaged commit, user git reset <file_name>
+to remove an entire commit, use git reset --hard <commit hash BEFORE the one you want removed>
+
+to add remote branch
+check if any exist using git remote -v
+if none exist, and you'e created a repo on Github
+run git remote add <name_of_remote_stream> <github_url>
+
+to push to github
+git push <name_of_remote_stream> <name_of_branch>
+you mush sit on the branch that you are pushing up

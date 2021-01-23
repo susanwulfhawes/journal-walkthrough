@@ -63,7 +63,7 @@ router.put("/update/:entryId", validateSession, function (req, res) {
     const query = {where: {id: req.params.entryId, owner: req.user.id }};
 
     Journal.update(updateJournalEntry, query)
-        .the((journals) => res.status(200).json(journals))
+        .then((journals) => res.status(200).json(journals))
         .catch((err) => res.status(500).json({error: err}));
 });
 
